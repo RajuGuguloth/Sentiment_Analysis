@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment Analytics Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <h2>Sentiment Analyzer</h2>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/analyze">Analyze Text</a></li>
+            <li><a href="/upload">Bulk Upload</a></li>
+            <li><a href="/profile">Profile</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Understand What People Feel</h1>
+        <p>Analyze your text or uploaded data and instantly detect sentiment patterns.</p>
+        <a href="/analyze" class="cta">Start Analysis</a>
+    </section>
+</body>
+</html>

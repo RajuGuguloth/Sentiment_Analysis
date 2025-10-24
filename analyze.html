@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analyze Text</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/analyze">Analyze</a></li>
+            <li><a href="/upload">Upload</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h2>Check Sentiment of Any Text</h2>
+        <form action="/predict" method="POST">
+            <textarea name="text" rows="6" cols="70" placeholder="Enter any text or paragraph..."></textarea><br>
+            <button type="submit">Predict Sentiment</button>
+        </form>
+
+        {% if prediction_text %}
+            <div class="output {{ sentiment_class }}">
+                <p>{{ prediction_text }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
